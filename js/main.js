@@ -23,15 +23,6 @@ const cropper = new Cropper(image, {
     center: false,
 });
 
-
-
-    
-    //default setting
-    let imageHeight = 520;
-    let imageWidth = 240;
-    let aspectRatio = 5 / 7;
-    let fillColor = "#fff";
-
     cropperInit();
 
     function cropperInit() {
@@ -90,15 +81,7 @@ const cropper = new Cropper(image, {
         if(data.toUpdateImageURL) {
             let url = data.updateImageURL;
             updateCropperImage(url);
-        }  else if(data.initSetting) {
-            let {aspectRatio:asptRatio , fillColor: backgroundColor,
-                imageHeight:imgH, imageWidth:imgW, noAspectRatio} = data.setting;
-            if(asptRatio) aspectRatio = asptRatio;
-            if(backgroundColor) fillColor = backgroundColor;
-            if(noAspectRatio) aspectRatio = NaN;
-            if(imgH) imageHeight = imgH;
-            if(imgW) imageWidth = imgW;
-            refreshCropper();
+        
         }
     }
 
