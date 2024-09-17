@@ -5,8 +5,8 @@
     const $uploadBtn = $('#upload-btn');
     const $cropBtn =  $('#crop-btn');
 
-    let width = 1;
-    let height = 1;
+    var width = 1;
+    var height = 1;
 
     $image.cropper.setDefaults({
     viewMode: 1,
