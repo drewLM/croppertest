@@ -7,7 +7,7 @@
 
 
 
-const cropper = new Cropper(image, {
+    $image.cropper.setDefaults({
     viewMode: 1,
     dragMode: 'move',
     aspectRatio: 1/1,
