@@ -82,8 +82,8 @@
         if(data.toUpdateImageURL) {
             let url = data.updateImageURL;
             updateCropperImage(url);
-            width = data.widthupload;
-            height = data.heightupload
+            width = data.widthupdate;
+            height = data.heightupdate;
         
         }
     }
