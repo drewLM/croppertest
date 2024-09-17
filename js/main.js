@@ -15,6 +15,7 @@
 
     function cropperInit() {
         $image.cropper({
+        viewMode: 1,
         aspectRatio: aspectRatio,
         crop: function(event) {
                 canvas = $image.cropper("getCroppedCanvas", {
