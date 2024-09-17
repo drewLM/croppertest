@@ -5,9 +5,8 @@
     const $uploadBtn = $('#upload-btn');
     const $cropBtn =  $('#crop-btn');
 
-    let height = 1;
     let width = 1;
-
+    let height = 1;
 
     $image.cropper.setDefaults({
     viewMode: 1,
@@ -76,6 +75,17 @@
     function refreshCropper() {
         cropperDestory();
         cropperInit();
+    }
+
+    window.onmessage = e => {
+        let {data} = e;
+        if(data.toUpdateImageURL) {
+            let url = data.updateImageURL;
+            updateCropperImage(url);
+            let width = data.widthupload;
+            let height = data.heightupload
+        
+        }
     }
 
     sendData({ready: true});
