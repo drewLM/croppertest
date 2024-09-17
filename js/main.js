@@ -18,6 +18,7 @@
         viewMode: 1,
         dragMode: 'move',
         aspectRatio: aspectRatio,
+        zoomable: false,
         crop: function(event) {
                 canvas = $image.cropper("getCroppedCanvas", {
                     fillColor: fillColor,
