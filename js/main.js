@@ -11,7 +11,6 @@
     $image.cropper.setDefaults({
     viewMode: 1,
     dragMode: 'move',
-    aspectRatio: width/height,
     autoCropArea: 1,
     restore: false,
     center: false,
@@ -28,6 +27,7 @@
 
     function cropperInit() {
         $image.cropper({
+        aspectRatio: width/height,
         crop: function(event) {
                 canvas = $image.cropper("getCroppedCanvas", {
                     fillColor: fillColor,
@@ -82,7 +82,7 @@
         if(data.toUpdateImageURL) {
             width = data.widthupdate;
             height = data.heightupdate;
-            
+
             let url = data.updateImageURL;
             updateCropperImage(url);
             
