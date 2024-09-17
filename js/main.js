@@ -5,6 +5,27 @@
     const $uploadBtn = $('#upload-btn');
     const $cropBtn =  $('#crop-btn');
 
+
+
+const cropper = new Cropper(image, {
+    viewMode: 1,
+    dragMode: 'move',
+    aspectRatio: 1/1,
+    autoCropArea: 1,
+    restore: false,
+    center: false,
+    cropBoxMovable: false,
+    cropBoxResizable: false,
+    toggleDragModeOnDblclick: false,
+    zoomable: false,
+    background:false,
+    guides: false,
+    center: false,
+});
+
+
+
+    
     //default setting
     let imageHeight = 520;
     let imageWidth = 240;
