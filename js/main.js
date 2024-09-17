@@ -5,12 +5,14 @@
     const $uploadBtn = $('#upload-btn');
     const $cropBtn =  $('#crop-btn');
 
+    let height = 1;
+    let width = 1;
 
 
     $image.cropper.setDefaults({
     viewMode: 1,
     dragMode: 'move',
-    aspectRatio: 1/1,
+    aspectRatio: width/height,
     autoCropArea: 1,
     restore: false,
     center: false,
@@ -74,15 +76,6 @@
     function refreshCropper() {
         cropperDestory();
         cropperInit();
-    }
-
-    window.onmessage = e => {
-        let {data} = e;
-        if(data.toUpdateImageURL) {
-            let url = data.updateImageURL;
-            updateCropperImage(url);
-        
-        }
     }
 
     sendData({ready: true});
