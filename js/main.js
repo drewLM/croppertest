@@ -39,7 +39,7 @@ const cropper = new Cropper(image, {
         crop: function(event) {
                 canvas = $image.cropper("getCroppedCanvas", {
                     fillColor: fillColor,
-                    maxWidth: 1100,
+                    maxWidth: 1100
                 });        
             }
         });
