@@ -80,10 +80,12 @@
     window.onmessage = e => {
         let {data} = e;
         if(data.toUpdateImageURL) {
-            let url = data.updateImageURL;
-            updateCropperImage(url);
             width = data.widthupdate;
             height = data.heightupdate;
+            
+            let url = data.updateImageURL;
+            updateCropperImage(url);
+            
         
         }
     }
