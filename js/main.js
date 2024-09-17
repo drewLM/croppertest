@@ -36,10 +36,6 @@ const cropper = new Cropper(image, {
 
     function cropperInit() {
         $image.cropper({
-        viewMode: 1,
-        dragMode: 'move',
-        aspectRatio: aspectRatio,
-        zoomable: false,
         crop: function(event) {
                 canvas = $image.cropper("getCroppedCanvas", {
                     fillColor: fillColor,
