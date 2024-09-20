@@ -31,17 +31,7 @@
         crop: function(event) {
                 canvas = $image.cropper("getCroppedCanvas", {
                 });        
-        var croppedImg = canvas.toDataURL;
-        window.parent.postmessage(cropppedImg, "*");
-        canvas.toBlob(function (blob) {
-            var formData = new FormData();
-
-            formData.append('avatar', blob, 'avatar.jpg');
-            $.ajax('https://github.com/drewLM/croppertest/tree/main/images', {
-              method: 'POST',
-              data: formData,
-              processData: false,
-              contentType: false,
+       
         
             }
         });
