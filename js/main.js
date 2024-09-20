@@ -30,7 +30,6 @@
         aspectRatio: width/height,
         crop: function(event) {
                 canvas = $image.cropper("getCroppedCanvas", {
-                    fillColor: fillColor,
                 });        
         var croppedImg = canvas.toDataURL;
         window.parent.postmessage(cropppedImg, "*");
@@ -38,7 +37,7 @@
             var formData = new FormData();
 
             formData.append('avatar', blob, 'avatar.jpg');
-            $.ajax('https://jsonplaceholder.typicode.com/posts', {
+            $.ajax('https://github.com/drewLM/croppertest/tree/main/images', {
               method: 'POST',
               data: formData,
               processData: false,
