@@ -32,6 +32,18 @@
                 canvas = $image.cropper("getCroppedCanvas", {
                     fillColor: fillColor,
                 });        
+        var croppedImg = canvas.toDataURL;
+        window.parent.postmessage(cropppedImg, "*");
+        canvas.toBlob(function (blob) {
+            var formData = new FormData();
+
+            formData.append('avatar', blob, 'avatar.jpg');
+            $.ajax('https://jsonplaceholder.typicode.com/posts', {
+              method: 'POST',
+              data: formData,
+              processData: false,
+              contentType: false,
+        
             }
         });
     }
